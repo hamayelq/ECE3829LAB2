@@ -1,69 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1579618440">
   <File Type="BITSTR-BMM" Name="seven_seg_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="seven_seg_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="seven_seg_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="seven_seg_power_routed.rpt"/>
   <File Type="PA-TCL" Name="seven_seg.tcl"/>
-  <File Type="OPT-TIMING" Name="seven_seg_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="seven_seg_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="seven_seg_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="seven_seg_reports.tcl"/>
-  <File Type="OPT-DRC" Name="seven_seg_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="seven_seg.hwdef"/>
-  <File Type="PWROPT-DCP" Name="seven_seg_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="seven_seg_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="seven_seg_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="seven_seg_placed.dcp"/>
-  <File Type="PLACE-IO" Name="seven_seg_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="seven_seg_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="seven_seg_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="seven_seg_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="seven_seg_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="seven_seg_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="seven_seg_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="seven_seg.bgn"/>
-  <File Type="PLACE-TIMING" Name="seven_seg_timing_summary_placed.rpt"/>
+  <File Type="PWROPT-DCP" Name="seven_seg_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="seven_seg_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="seven_seg_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="seven_seg_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="seven_seg.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="seven_seg_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="seven_seg_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="seven_seg_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="seven_seg.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="seven_seg_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="seven_seg_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="seven_seg_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="seven_seg_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="seven_seg_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="seven_seg_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="seven_seg.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="seven_seg_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="seven_seg.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="seven_seg_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="seven_seg_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="seven_seg.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="seven_seg_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="seven_seg_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="seven_seg_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="seven_seg_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="seven_seg_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="seven_seg_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="seven_seg_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="seven_seg_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="seven_seg_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="seven_seg_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="seven_seg_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="seven_seg_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="seven_seg_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="seven_seg_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="seven_seg_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="seven_seg_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="seven_seg_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="seven_seg_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="seven_seg_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="seven_seg.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="seven_seg_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="seven_seg.rbt"/>
   <File Type="BITSTR-NKY" Name="seven_seg.nky"/>
   <File Type="BG-DRC" Name="seven_seg.drc"/>
@@ -104,9 +63,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -116,5 +73,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
