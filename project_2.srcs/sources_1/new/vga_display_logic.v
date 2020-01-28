@@ -20,9 +20,11 @@ module vga_display_logic (
 
     //need to make a decoder module. how do we make this work?
     //basically converting a and b input to seven seg
-    segment_decode(.switchChoice(PRESS_A), .SEG(SEG1));
-    segment_decode(.switchChoice(PRESS_B), .SEG(SEG2));
+//    segment_decode(.switchChoice(PRESS_A), .SEG(SEG1));
+//    segment_decode(.switchChoice(PRESS_B), .SEG(SEG2));
 
+
+    // Color definitions
     parameter BLACK = 12'b0000_0000_0000;
     parameter WHITE = 12'b1111_1111_1111;
     parameter RED =   12'b1111_0000_0000;

@@ -24,7 +24,7 @@ module dcm(
     input clk_fpga,
     input reset,
     output lockled,
-    output clktwenty5
+    output clk_25
     );
     
     wire clk_10M;
@@ -41,6 +41,8 @@ module dcm(
    // Clock in ports
     .clk_in1(clk_fpga));      // input clk_in1
 // INST_TAG_END ------ End INSTANTIATION Template ---------
+
+//always @ (posedge clk_wiz_0) 
 
     
 endmodule
