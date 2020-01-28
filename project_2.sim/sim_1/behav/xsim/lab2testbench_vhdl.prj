@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_2.srcs/vga_controller_640_60.vhd" \
+
+# Do not sort compile order
+nosort

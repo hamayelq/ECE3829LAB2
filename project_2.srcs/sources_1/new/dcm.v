@@ -27,20 +27,18 @@ module dcm(
     output clk_25
     );
     
-    wire clk_10M;
-    
-    //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
+    wire clk_25;
 
-  clk_wiz_0 instance_name
+  clk_wiz_0 clk_main
    (
     // Clock out ports
-    .clk_out1(clk),     // output clk_out1
+    .clk_out1(clk_25),     // output clk_out1
     // Status and control signals
     .reset(reset), // input reset
-    .locked(lock_led),       // output locked
+    .locked(locked),       // output locked
    // Clock in ports
     .clk_in1(clk_fpga));      // input clk_in1
-// INST_TAG_END ------ End INSTANTIATION Template ---------
+
 
 //always @ (posedge clk_wiz_0) 
 

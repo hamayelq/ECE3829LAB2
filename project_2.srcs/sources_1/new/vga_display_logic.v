@@ -1,39 +1,52 @@
 `timescale 1ns / 1ps
 
 module vga_display_logic (
-    input BLANK,
-    input PRESS,
-    input [3:0] PRESS_A,
-    input [3:0] PRESS_B,
-    input [1:0] SEL,
-    input [10:0] hsync,
-    input [10:0] vsync,
-    
-    output reg [3:0] R,
-    output reg [3:0] G,
-    output reg [3:0] B
+    input [1:0] SEL ,
+    output hsync,
+    output vsync,
+    input clk,
+    output wire [3:0] R,
+    output wire [3:0] G,
+    output wire [3:0] B
     );
-
-    wire [6:0] SEG1;
-    wire [6:0] SEG2;
-//    wire yellow&orange = vsyncount[4];
-
-    //need to make a decoder module. how do we make this work?
-    //basically converting a and b input to seven seg
-//    segment_decode(.switchChoice(PRESS_A), .SEG(SEG1));
-//    segment_decode(.switchChoice(PRESS_B), .SEG(SEG2));
-
-
+    
+    wire [10:0] hcount;
+    wire [10:0] vcount;
+    wire [11:0] RGB;
+    wire [11:0] state;
+    wire reset;
+    wire blank;
+    
     // Color definitions
-    parameter BLACK = 12'b0000_0000_0000;
-    parameter WHITE = 12'b1111_1111_1111;
-    parameter RED =   12'b1111_0000_0000;
-    parameter GREEN = 12'b0000_1111_0000;
-    parameter BLUE =  12'b0000_0000_1111;
-    parameter YELLOW = RED + GREEN;
-    parameter PURPLE = RED + BLUE;
-    parameter TEAL = GREEN + BLUE;
-    parameter ORANGE = YELLOW + RED; 
+    parameter BLACK   = 12'h000;
+    parameter WHITE   = 12'hfff;
+    parameter RED     = 12'hf00;
+    parameter GREEN   = 12'h0f0;
+    parameter BLUE    = 12'h00f;
+    parameter YELLOW  = 12'hff0;
+    parameter MAGENTA = 12'hf0f;
+    parameter TEAL    = 12'h0ff;
+    parameter ORANGE  = 12'hfa0; 
+
+//    always @ (SEL, blank)
+//        case(SEL)
+//            2'b00: 
+//            2'b01:
+//            2'b10:
+//            2'b11:
+//            begin
+                    
+//            end
+   
+    
+    assign RGB = (blank) ? BLACK : state;
+    assign state = (SEL == 2'b00) ? BLUE : (SEL == 2'b01) ? ORANGE : BLACK;
+    
+    assign R = RGB[11:8];
+    assign G = RGB[7:4];
+    assign B = RGB[3:0];
+
+vga_controller_640_60 vga(.rst(reset), .pixel_clk(clk), .HS(hsync), .VS(vsync), .hcount(hcount), .vcount(vcount), .blank(blank));
 
 //    always @ (SEL)
 //        begin

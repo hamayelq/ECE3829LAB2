@@ -1,37 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1579618440">
-  <File Type="BITSTR-BMM" Name="seven_seg_bd.bmm"/>
-  <File Type="PA-TCL" Name="seven_seg.tcl"/>
-  <File Type="OPT-DCP" Name="seven_seg_opt.dcp"/>
-  <File Type="REPORTS-TCL" Name="seven_seg_reports.tcl"/>
-  <File Type="OPT-HWDEF" Name="seven_seg.hwdef"/>
-  <File Type="BG-BGN" Name="seven_seg.bgn"/>
-  <File Type="PWROPT-DCP" Name="seven_seg_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="seven_seg_placed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="seven_seg_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="seven_seg_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="seven_seg.bin"/>
-  <File Type="PHYSOPT-DCP" Name="seven_seg_physopt.dcp"/>
-  <File Type="BITSTR-MSK" Name="seven_seg.msk"/>
-  <File Type="ROUTE-ERROR-DCP" Name="seven_seg_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="seven_seg_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="seven_seg_routed_bb.dcp"/>
-  <File Type="BITSTR-LTX" Name="seven_seg.ltx"/>
-  <File Type="BITSTR-MMI" Name="seven_seg.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="seven_seg.sysdef"/>
-  <File Type="ROUTE-TIMING-PB" Name="seven_seg_timing_summary_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="seven_seg_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="seven_seg_postroute_physopt_bb.dcp"/>
-  <File Type="BG-BIT" Name="seven_seg.bit"/>
-  <File Type="BITSTR-RBT" Name="seven_seg.rbt"/>
-  <File Type="BITSTR-NKY" Name="seven_seg.nky"/>
-  <File Type="BG-DRC" Name="seven_seg.drc"/>
-  <File Type="RDI-RDI" Name="seven_seg.vdi"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1580226851">
+  <File Type="BITSTR-BMM" Name="lab2_top_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="lab2_top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="lab2_top_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="lab2_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="lab2_top.tcl"/>
+  <File Type="OPT-TIMING" Name="lab2_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="lab2_top_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="lab2_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="lab2_top_reports.tcl"/>
+  <File Type="OPT-DRC" Name="lab2_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="lab2_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="lab2_top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="lab2_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="lab2_top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="lab2_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="lab2_top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="lab2_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="lab2_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="lab2_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="lab2_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="lab2_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="lab2_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="lab2_top_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="lab2_top_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="lab2_top.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="lab2_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="lab2_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="lab2_top_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="lab2_top.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="lab2_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="lab2_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="lab2_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="lab2_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="lab2_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="lab2_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="lab2_top_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="lab2_top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="lab2_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="lab2_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="lab2_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="lab2_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="lab2_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="lab2_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="lab2_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="lab2_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="lab2_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="lab2_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="lab2_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="lab2_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="lab2_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="lab2_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="lab2_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="lab2_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="lab2_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="lab2_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="lab2_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="lab2_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="lab2_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="lab2_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="lab2_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="lab2_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="lab2_top.nky"/>
+  <File Type="PDI-FILE" Name="lab2_top.pdi"/>
+  <File Type="RCFI_FILE" Name="lab2_top.rcfi"/>
+  <File Type="CFI_FILE" Name="lab2_top.cfi"/>
+  <File Type="RNPI_FILE" Name="lab2_top.rnpi"/>
+  <File Type="NPI_FILE" Name="lab2_top.npi"/>
+  <File Type="RBD_FILE" Name="lab2_top.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="lab2_top.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="lab2_top.sysdef"/>
+  <File Type="BG-BGN" Name="lab2_top.bgn"/>
+  <File Type="BG-DRC" Name="lab2_top.drc"/>
+  <File Type="RDI-RDI" Name="lab2_top.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/vga_display_logic.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/vga_controller_640_60.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/lab2_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/light_sensor.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seg_decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSIMDIR/seven_seg.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/lab2testbench.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dcm.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -39,20 +139,20 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="seven_seg"/>
+      <Option Name="TopModule" Val="lab2_top"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/seven_seg.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/lab2_top.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/seven_seg.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/lab2_top.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -73,6 +173,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>
