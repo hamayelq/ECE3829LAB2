@@ -46,7 +46,15 @@ module vga_display_logic (
     assign G = RGB[7:4];
     assign B = RGB[3:0];
 
-vga_controller_640_60 vga(.rst(reset), .pixel_clk(clk), .HS(hsync), .VS(vsync), .hcount(hcount), .vcount(vcount), .blank(blank));
+vga_controller_640_60 vga(
+    .rst(reset), 
+    .pixel_clk(clk), 
+    .HS(hsync), 
+    .VS(vsync), 
+    .hcount(hcount), 
+    .vcount(vcount), 
+    .blank(blank)
+);
 
 //    always @ (SEL)
 //        begin
