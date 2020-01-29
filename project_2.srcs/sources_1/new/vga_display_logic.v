@@ -5,17 +5,23 @@ module vga_display_logic (
     output hsync,
     output vsync,
     input clk,
+    input [10:0] hcount,
+    input [10:0] vcount,
+
     output wire [3:0] R,
     output wire [3:0] G,
     output wire [3:0] B
     );
-    
+
+    wire yellowOrange = vcount[4];
     wire [10:0] hcount;
     wire [10:0] vcount;
     wire [11:0] RGB;
     wire [11:0] state;
     wire reset;
     wire blank;
+
+
     
     // Color definitions
     parameter BLACK   = 12'h000;
@@ -28,15 +34,27 @@ module vga_display_logic (
     parameter TEAL    = 12'h0ff;
     parameter ORANGE  = 12'hfa0; 
 
-//    always @ (SEL, blank)
-//        case(SEL)
-//            2'b00: 
-//            2'b01:
-//            2'b10:
-//            2'b11:
-//            begin
-                    
-//            end
+   always @ (SEL, blank)
+       case(SEL)
+           2'b00: begin
+                    state = (blank) ? BLACK : BLUE;
+           2'b01: begin
+                    for(i=0; i < 480; i++)
+                        if (i % 16 == 0)
+                            //draw yellow for the previous 16 pixels
+                            //and orange for the next 16
+                            //repeat till 480
+           2'b10: begin
+                    if(hcount <= 120 && vcount <= 120)
+                        state = (blank) ? BLACK : GREEN;
+                    else
+                        state = (blank) ? BLACK : BLACK;
+           2'b11: begin
+                    if(hcount >= 520 && vcount >= 360)
+                        state = (blank) ? BLACK : WHITE;
+                    else
+                        state = (blank) ? BLACK : BLACK;
+    end
    
     
     assign RGB = (blank) ? BLACK : state;
@@ -54,7 +72,7 @@ vga_controller_640_60 vga(
     .hcount(hcount), 
     .vcount(vcount), 
     .blank(blank)
-);
+    );
 
 //    always @ (SEL)
 //        begin
