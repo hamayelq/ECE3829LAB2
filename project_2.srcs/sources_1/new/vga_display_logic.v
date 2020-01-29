@@ -39,11 +39,10 @@ module vga_display_logic (
            2'b00: begin
                     state = (blank) ? BLACK : BLUE;
            2'b01: begin
-                    for(i=0; i < 480; i++)
-                        if (i % 16 == 0)
-                            //draw yellow for the previous 16 pixels
-                            //and orange for the next 16
-                            //repeat till 480
+                    if(yellowOrange)
+                        state = (blank) ? BLACK : ORANGE;
+                    else
+                        state = (blank) ? BLACK : YELLOW;
            2'b10: begin
                     if(hcount <= 120 && vcount <= 120)
                         state = (blank) ? BLACK : GREEN;
