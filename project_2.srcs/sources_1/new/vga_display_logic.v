@@ -13,7 +13,6 @@ module vga_display_logic (
     output wire [3:0] B
     );
 
-    wire yellowOrange = vcount[4];
     wire [10:0] hcount;
     wire [10:0] vcount;
     wire [11:0] RGB;
@@ -21,7 +20,7 @@ module vga_display_logic (
     wire reset;
     wire blank;
 
-
+    wire yellowOrange = hcount[4];
     
     // Color definitions
     parameter BLACK   = 12'h000;
@@ -38,8 +37,8 @@ module vga_display_logic (
     assign state = 
             (SEL == 2'b00) ? BLUE :
             (SEL == 2'b01) ? (yellowOrange) ? ORANGE : YELLOW :
-            (SEL == 2'b10) ? (hcount <= 120 && vcount <= 120) ? GREEN : BLACK :
-                             (hcount >= 520 && vcount >= 360) ? WHITE : BLACK;
+            (SEL == 2'b10) ? (hcount <= 120 && vcount >= 360) ? GREEN : BLACK :
+                             (hcount >= 608 && vcount >= 448) ? WHITE : BLACK;
                             
             
     

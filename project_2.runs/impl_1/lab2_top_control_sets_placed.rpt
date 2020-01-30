@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 30 17:37:14 2020
+| Date         : Thu Jan 30 17:55:03 2020
 | Host         : DESKTOP-1GCDH6O running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab2_top_control_sets_placed.rpt
 | Design       : lab2_top
@@ -60,10 +60,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               1 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              13 |            6 |
-| Yes          | No                    | No                     |               5 |            2 |
+| No           | Yes                   | No                     |              13 |            7 |
+| Yes          | No                    | No                     |               5 |            1 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               6 |            1 |
+| Yes          | Yes                   | No                     |               6 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,11 +74,11 @@ Table of Contents
 |       Clock Signal      |       Enable Signal      |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
 +-------------------------+--------------------------+------------------------------+------------------+----------------+
 |  clk_main/inst/clk_out1 |                          |                              |                1 |              1 |
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/HS0      |                1 |              1 |
 |  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/VS0      |                1 |              1 |
-|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp |                              |                2 |              5 |
-|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp | vga_color_logic/vga/vcounter |                1 |              6 |
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/eqOp     |                4 |             11 |
+|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/HS0      |                1 |              1 |
+|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp |                              |                1 |              5 |
+|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp | vga_color_logic/vga/vcounter |                2 |              6 |
+|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/eqOp     |                5 |             11 |
 +-------------------------+--------------------------+------------------------------+------------------+----------------+
 
 
