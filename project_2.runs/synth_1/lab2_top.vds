@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jan 28 10:52:39 2020
-# Process ID: 120132
+# Start of session at: Thu Jan 30 17:35:14 2020
+# Process ID: 89256
 # Current directory: C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1
 # Command line: vivado.exe -log lab2_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2_top.tcl
 # Log file: C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/lab2_top.vds
@@ -16,13 +16,15 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 109100 
+INFO: Helper process launched with PID 84908 
+WARNING: [Synth 8-2611] redeclaration of ansi port hcount is not allowed [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:17]
+WARNING: [Synth 8-2611] redeclaration of ansi port vcount is not allowed [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:18]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 846.539 ; gain = 234.738
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 850.773 ; gain = 239.758
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'lab2_top' [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/lab2_top.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/.Xil/Vivado-120132-DESKTOP-1GCDH6O/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/.Xil/Vivado-120132-DESKTOP-1GCDH6O/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/.Xil/Vivado-89256-DESKTOP-1GCDH6O/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/.Xil/Vivado-89256-DESKTOP-1GCDH6O/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_display_logic' [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:3]
 	Parameter BLACK bound to: 12'b000000000000 
 	Parameter WHITE bound to: 12'b111111111111 
@@ -35,12 +37,15 @@ INFO: [Synth 8-6157] synthesizing module 'vga_display_logic' [C:/Users/Nam Tran/
 	Parameter ORANGE bound to: 12'b111110100000 
 INFO: [Synth 8-638] synthesizing module 'vga_controller_640_60' [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/vga_controller_640_60.vhd:88]
 INFO: [Synth 8-256] done synthesizing module 'vga_controller_640_60' (2#1) [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/vga_controller_640_60.vhd:88]
-WARNING: [Synth 8-3848] Net reset in module/entity vga_display_logic does not have driver. [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:17]
+WARNING: [Synth 8-6104] Input port 'hcount' has an internal driver [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:55]
+WARNING: [Synth 8-6104] Input port 'vcount' has an internal driver [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:56]
+WARNING: [Synth 8-3848] Net reset in module/entity vga_display_logic does not have driver. [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'vga_display_logic' (3#1) [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v:3]
+WARNING: [Synth 8-7023] instance 'vga_color_logic' of module 'vga_display_logic' has 9 connections declared, but only 7 given [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/lab2_top.v:49]
 WARNING: [Synth 8-3848] Net reset in module/entity lab2_top does not have driver. [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/lab2_top.v:37]
 INFO: [Synth 8-6155] done synthesizing module 'lab2_top' (4#1) [C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/lab2_top.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 920.090 ; gain = 308.289
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 897.895 ; gain = 286.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -53,12 +58,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 920.090 ; gain = 308.289
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 897.895 ; gain = 286.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 920.090 ; gain = 308.289
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 897.895 ; gain = 286.879
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 920.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 897.895 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -71,20 +76,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/lab2_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1007.910 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1014.324 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1007.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1014.324 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1007.910 ; gain = 396.109
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1007.910 ; gain = 396.109
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -93,10 +98,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_fpga. (constraint file  {c:/U
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_fpga. (constraint file  {c:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 4).
 Applied set_property DONT_TOUCH = true for clk_main. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1007.910 ; gain = 396.109
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1007.910 ; gain = 396.109
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -114,7 +119,8 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 2     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     12 Bit        Muxes := 2     
+	   5 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -135,7 +141,8 @@ Detailed RTL Component Info :
 Module vga_display_logic 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     12 Bit        Muxes := 2     
+	   5 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -152,10 +159,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3917] design lab2_top has port G[2] driven by constant 0
-WARNING: [Synth 8-3917] design lab2_top has port G[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1007.910 ; gain = 396.109
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -167,13 +172,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1007.910 ; gain = 396.109
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1015.469 ; gain = 403.668
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1014.324 ; gain = 403.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -185,7 +190,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1016.641 ; gain = 404.840
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.840 ; gain = 409.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,13 +215,13 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_main has unconnected pin reset
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -235,25 +240,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -272,11 +277,11 @@ Report Cell Usage:
 +------+----------+------+
 |1     |clk_wiz_0 |     1|
 |2     |LUT1      |     2|
-|3     |LUT2      |     4|
-|4     |LUT3      |     6|
-|5     |LUT4      |     5|
-|6     |LUT5      |     7|
-|7     |LUT6      |    14|
+|3     |LUT2      |     3|
+|4     |LUT3      |     5|
+|5     |LUT4      |    13|
+|6     |LUT5      |     9|
+|7     |LUT6      |    20|
 |8     |FDRE      |    25|
 |9     |IBUF      |     2|
 |10    |OBUF      |    14|
@@ -286,31 +291,31 @@ Report Instance Areas:
 +------+------------------+----------------------+------+
 |      |Instance          |Module                |Cells |
 +------+------------------+----------------------+------+
-|1     |top               |                      |    81|
-|2     |  vga_color_logic |vga_display_logic     |    63|
-|3     |    vga           |vga_controller_640_60 |    61|
+|1     |top               |                      |    95|
+|2     |  vga_color_logic |vga_display_logic     |    77|
+|3     |    vga           |vga_controller_640_60 |    77|
 +------+------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1021.441 ; gain = 321.820
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1021.441 ; gain = 409.641
+Synthesis finished with 0 errors, 1 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 1026.598 ; gain = 299.152
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1026.598 ; gain = 415.582
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1021.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1026.598 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1032.820 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.223 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
+18 Infos, 7 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1032.820 ; gain = 693.340
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1032.820 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 1038.223 ; gain = 698.852
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.223 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/lab2_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file lab2_top_utilization_synth.rpt -pb lab2_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 28 10:53:29 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 30 17:36:15 2020...

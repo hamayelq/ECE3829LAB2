@@ -34,30 +34,14 @@ module vga_display_logic (
     parameter TEAL    = 12'h0ff;
     parameter ORANGE  = 12'hfa0; 
 
-   always @ (SEL, blank)
-       case(SEL)
-           2'b00: begin
-                    state = (blank) ? BLACK : BLUE;
-           2'b01: begin
-                    if(yellowOrange)
-                        state = (blank) ? BLACK : ORANGE;
-                    else
-                        state = (blank) ? BLACK : YELLOW;
-           2'b10: begin
-                    if(hcount <= 120 && vcount <= 120)
-                        state = (blank) ? BLACK : GREEN;
-                    else
-                        state = (blank) ? BLACK : BLACK;
-           2'b11: begin
-                    if(hcount >= 520 && vcount >= 360)
-                        state = (blank) ? BLACK : WHITE;
-                    else
-                        state = (blank) ? BLACK : BLACK;
-    end
-   
-    
     assign RGB = (blank) ? BLACK : state;
-    assign state = (SEL == 2'b00) ? BLUE : (SEL == 2'b01) ? ORANGE : BLACK;
+    assign state = 
+            (SEL == 2'b00) ? BLUE :
+            (SEL == 2'b01) ? (yellowOrange) ? ORANGE : YELLOW :
+            (SEL == 2'b10) ? (hcount <= 120 && vcount <= 120) ? GREEN : BLACK :
+                             (hcount >= 520 && vcount >= 360) ? WHITE : BLACK;
+                            
+            
     
     assign R = RGB[11:8];
     assign G = RGB[7:4];
@@ -72,46 +56,5 @@ vga_controller_640_60 vga(
     .vcount(vcount), 
     .blank(blank)
     );
-
-//    always @ (SEL)
-//        begin
-//            if (sel == 2'b00)   //blank screen or blue
-//                R = ZEROES;
-//                G = ZEROES;
-//                B = BLANK ? ZEROES : ONES;
-//                //R and G off, blue on unless blank
-//                //fill this out, kill me XDDDDD
-
-//                // if (BUTTON = 1)
-
-//            end
-//        end
-
-//        else if (sel == 2'b01) //horizontal lines
-//            begin
-//                R = BLANK ? ZEROES : ONES;  //red if not blank
-//                G = BLANK ? ZEROES :
-//                B = ZEROES; //this is going to make red and yellow not qquite yellow and orange
-//            end
-
-//        else if (sel == 2'b10) //black screen box
-//            begin
-//                R = BLANK ? ZEROES;
-//                (vsync > ?? && hsync <= ?? ) ? ONES : ZEROES;
-//                G = BLANK ? ZEROES;
-//                (vsync > ?? && hsync <= ?? ) ? ONES : ZEROES;
-//                B = BLANK ? ZEROES;
-//                (vsync > ?? && hsync <= ?? ) ? ONES : ZEROES;
-//                //turn them on if they're in bottom right part to make white box
-
-//        else if (sel == 2'b11)  //green box
-//            begin
-//                R = BLANK ? ZEROES;
-//                (vsync > ?? && hsync <= ?? ) ? ZEROES : ZEROES;
-//                G = BLANK ? ZEROES;
-//                (vsync > ?? && hsync <= ?? ) ? ONES : ZEROES;
-//                B = BLANK ? ZEROES;
-//                (vsync > ?? && hsync <= ?? ) ? ZEROES : ZEROES;
-//                //only turn on if in range of green box ayayayaay
 
 endmodule
