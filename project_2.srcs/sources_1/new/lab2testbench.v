@@ -23,6 +23,8 @@
 module lab2testbench();
 reg clk,reset;
 reg [1:0] sw;
+reg sdo;
+wire cs, sck;
 wire [3:0] R, G, B;
 wire hsync, vsync;
 
@@ -39,6 +41,6 @@ end
 
 always #5 clk = ~clk;
 
-lab2_top top(.clk_fpga(clk), .sw(sw), .R(R), .G(G), .B(B), .hsync(hsync), .vsync(vsync));
+lab2_top top(.clk_fpga(clk), .sw(sw), .cs(cs), .sdo(sdo), .sck(sck), .R(R), .G(G), .B(B), .hsync(hsync), .vsync(vsync));
 
 endmodule

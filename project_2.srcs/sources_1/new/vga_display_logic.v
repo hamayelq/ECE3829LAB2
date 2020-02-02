@@ -37,11 +37,9 @@ module vga_display_logic (
     assign state = 
             (SEL == 2'b00) ? BLUE :
             (SEL == 2'b01) ? (yellowOrange) ? ORANGE : YELLOW :
-            (SEL == 2'b10) ? (hcount <= 120 && vcount >= 360) ? GREEN : BLACK :
+            (SEL == 2'b10) ? (hcount <= 128 && vcount >= 352) ? GREEN : BLACK :
                              (hcount >= 608 && vcount >= 448) ? WHITE : BLACK;
                             
-            
-    
     assign R = RGB[11:8];
     assign G = RGB[7:4];
     assign B = RGB[3:0];

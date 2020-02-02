@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Nam Tran, Hamayel Qureshi
 // 
-// Create Date: 01/21/2020 09:05:15 AM
+// Create Date: 01/31/2020 10:07:27 AM
 // Design Name: 
-// Module Name: seg_decoder
+// Module Name: segment_decoder
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module seg_decoder(
+module segment_decoder(
     input [3:0] switchChoice,
     output reg [6:0] SEG
     );
-    
              
     parameter display0 = 7'b1000000;
     parameter display1 = 7'b1111001;
@@ -45,7 +44,6 @@ module seg_decoder(
     
     always @(switchChoice)
         begin
-
             case(switchChoice)
                 4'b0000: SEG = display0;
                 4'b0001: SEG = display1;
@@ -65,5 +63,4 @@ module seg_decoder(
                 4'b1111: SEG = displayF;
             endcase
         end
-    
 endmodule

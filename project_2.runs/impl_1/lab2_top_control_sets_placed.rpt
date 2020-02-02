@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jan 30 17:55:03 2020
+| Date         : Fri Jan 31 11:02:41 2020
 | Host         : DESKTOP-1GCDH6O running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab2_top_control_sets_placed.rpt
 | Design       : lab2_top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     6 |
-|    Minimum number of control sets                        |     6 |
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    31 |
+| Unused register locations in slices containing registers |    66 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     6 |
-| >= 0 to < 4        |     3 |
-| >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     1 |
+| Total control sets |    15 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     1 |
+| >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     0 |
-| >= 16              |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,27 +58,36 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | No                     |               7 |            6 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              13 |            7 |
-| Yes          | No                    | No                     |               5 |            1 |
+| No           | Yes                   | No                     |              63 |           21 |
+| Yes          | No                    | No                     |              14 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               6 |            2 |
+| Yes          | Yes                   | No                     |              10 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------+--------------------------+------------------------------+------------------+----------------+
-|       Clock Signal      |       Enable Signal      |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+-------------------------+--------------------------+------------------------------+------------------+----------------+
-|  clk_main/inst/clk_out1 |                          |                              |                1 |              1 |
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/VS0      |                1 |              1 |
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/HS0      |                1 |              1 |
-|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp |                              |                1 |              5 |
-|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp | vga_color_logic/vga/vcounter |                2 |              6 |
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/eqOp     |                5 |             11 |
-+-------------------------+--------------------------+------------------------------+------------------+----------------+
++-------------------------+----------------------------+-------------------------------+------------------+----------------+
+|       Clock Signal      |        Enable Signal       |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++-------------------------+----------------------------+-------------------------------+------------------+----------------+
+|  sck_OBUF_BUFG          |                            |                               |                1 |              1 |
+|  clk_main/inst/clk_out1 |                            | vga_color_logic/vga/VS0       |                1 |              1 |
+|  clk_main/inst/clk_out1 |                            | vga_color_logic/vga/HS0       |                1 |              1 |
+|  seg1/clk_en            |                            | seg1/ANODE[3]_i_1_n_0         |                1 |              2 |
+|  seg1/clk_en            |                            | seg1/SEL_reg[0]_0[0]          |                2 |              2 |
+|  seg1/clk_en            |                            | seg1/SEL[1]                   |                1 |              4 |
+|  sck_OBUF_BUFG          | sens/lightData[12]_i_1_n_0 | sck_OBUF_BUFG                 |                1 |              4 |
+|  clk_main/inst/clk_out1 |                            | sens/clk1_counter[4]_i_1_n_0  |                1 |              5 |
+|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp   |                               |                2 |              5 |
+|  clk_main/inst/clk_out1 |                            |                               |                5 |              6 |
+|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp   | vga_color_logic/vga/vcounter  |                2 |              6 |
+|  sck_OBUF_BUFG          | sens/lightData[12]_i_1_n_0 |                               |                3 |             10 |
+|  clk_main/inst/clk_out1 |                            | vga_color_logic/vga/eqOp      |                3 |             11 |
+|  clk_main/inst/clk_out1 |                            | seg1/counter[15]_i_1_n_0      |                4 |             15 |
+|  sck_OBUF_BUFG          |                            | sens/clk2_counter[21]_i_1_n_0 |                7 |             22 |
++-------------------------+----------------------------+-------------------------------+------------------+----------------+
 
 

@@ -71,7 +71,7 @@ set rc [catch {
   set_property webtalk.parent_dir {C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.cache/wt} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force lab2_top.mmi }
-  write_bitstream -force lab2_top.bit 
+  write_bitstream -force lab2_top.bit -bin_file
   catch {write_debug_probes -quiet -force lab2_top}
   catch {file copy -force lab2_top.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
