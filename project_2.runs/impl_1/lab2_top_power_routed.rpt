@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Fri Jan 31 11:03:11 2020
+| Date             : Tue Feb  4 08:50:58 2020
 | Host             : DESKTOP-1GCDH6O running 64-bit major release  (build 9200)
 | Command          : report_power -file lab2_top_power_routed.rpt -pb lab2_top_power_summary_routed.pb -rpx lab2_top_power_routed.rpx
 | Design           : lab2_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.190        |
+| Total On-Chip Power (W)  | 0.189        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.118        |
+| Dynamic (W)              | 0.117        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -49,23 +49,21 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |    <0.001 |        8 |       --- |             --- |
-| Slice Logic             |    <0.001 |      205 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |       71 |     20800 |            0.34 |
-|   Register              |    <0.001 |       94 |     41600 |            0.23 |
-|   CARRY4                |    <0.001 |       10 |      8150 |            0.12 |
-|   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |        8 |       --- |             --- |
-| Signals                 |    <0.001 |      157 |       --- |             --- |
-| MMCM                    |     0.116 |        1 |         5 |           20.00 |
-| I/O                     |    <0.001 |       32 |       106 |           30.19 |
-| Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.190 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |    <0.001 |        8 |       --- |             --- |
+| Slice Logic    |    <0.001 |      184 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       61 |     20800 |            0.29 |
+|   CARRY4       |    <0.001 |        9 |      8150 |            0.11 |
+|   Register     |    <0.001 |       86 |     41600 |            0.21 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |    <0.001 |      143 |       --- |             --- |
+| MMCM           |     0.116 |        1 |         5 |           20.00 |
+| I/O            |    <0.001 |       32 |       106 |           30.19 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.189 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -148,7 +146,7 @@ Table of Contents
 +------------+-----------+
 | Name       | Power (W) |
 +------------+-----------+
-| lab2_top   |     0.118 |
+| lab2_top   |     0.117 |
 |   clk_main |     0.116 |
 |     inst   |     0.116 |
 +------------+-----------+

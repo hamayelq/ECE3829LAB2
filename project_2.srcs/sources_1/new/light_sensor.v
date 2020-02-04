@@ -10,50 +10,43 @@ module light_sensor(
     );
     
     // 1MHz clock divider
-    reg clk_1M;
     reg [4:0] clk1_counter;
     always @ (posedge clk_25M)
         begin
-        clk_1M = (clk1_counter == 24) ? 1 : 0;
-        if(clk1_counter == 25)
-            clk1_counter = 0;
+        if(clk1_counter == 24)
+            clk1_counter <= 0;
          else
-            clk1_counter = clk1_counter + 1'b1;
+            clk1_counter <= clk1_counter + 1'b1;
         end
     
+    // sck is 1Mhz
+    assign sck = (clk1_counter >= 12 && clk1_counter < 24) ? 1 : 0;
+    
     // 10Hz clock divider
-    reg clk_10H;
-    reg [21:0] clk2_counter;
-    always @ (posedge clk_1M)
+    reg [16:0] clk2_counter;
+    always @ (posedge sck)
         begin
-        clk_10H = (clk2_counter == 2500000-1) ? 1 : 0;
-        if(clk2_counter == 2500000)
-            clk2_counter = 0;
+        if(clk2_counter == 999999)
+            clk2_counter <= 0;
         else
             clk2_counter = clk2_counter + 1'b1;            
         end
-        
-    assign cs = clk_10H;
-    assign sck = clk_1M;
+
+    // cs low for 16 cycles, high for the rest        
+    assign cs = (clk2_counter <= 16) ? 1'b0 : 1'b1;
     
     reg [15:0] lightData;
-    reg [3:0]  cnt;
     always @ (posedge sck, posedge reset)
-        if(cnt != 4'b1111 && clk_1M == 0)
-            begin   //shift the input data into lightData
-                cnt <= cnt + 1'b1;
-                lightData = {lightData[14:0], sdo};
-            end
-        else if(clk_1M == 1)  //send data to seven segment and color display at 1
+        begin
+            if(~cs)
             begin
-                cnt <= 4'b0000;
+                lightData = lightData << 1;
+                lightData[0] <= sdo;
             end
-        else if(reset)  //remove/reset data if reset
-            begin
-                cnt <= 4'b0000;
-                lightData <= 16'b0;
-            end
-    
-    assign light = (clk_1M == 1)? lightData[12:5] : {0};
+        if(reset)  //remove/reset data if reset
+            lightData <= 16'b0;
+        end
+        
+    assign light = lightData[11:4];
         
 endmodule
