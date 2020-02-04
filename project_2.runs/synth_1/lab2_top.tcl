@@ -32,8 +32,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+read_mem {{C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/rom_data.mem}}
 read_verilog -library xil_defaultlib {
   {C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/light_sensor.v}
+  {C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/rom_4kx8.v}
   {C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.sim/seven_seg.v}
   {C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/vga_display_logic.v}
   {C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.srcs/sources_1/new/lab2_top.v}

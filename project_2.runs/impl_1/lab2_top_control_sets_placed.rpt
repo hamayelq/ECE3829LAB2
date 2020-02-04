@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Feb  4 08:50:30 2020
+| Date         : Tue Feb  4 10:57:34 2020
 | Host         : DESKTOP-1GCDH6O running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab2_top_control_sets_placed.rpt
 | Design       : lab2_top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    58 |
+| Unused register locations in slices containing registers |    57 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              27 |            9 |
+| No           | No                    | No                     |              28 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              36 |           14 |
-| Yes          | No                    | No                     |               5 |            3 |
+| No           | Yes                   | No                     |              36 |           15 |
+| Yes          | No                    | No                     |               4 |            2 |
 | Yes          | No                    | Yes                    |              12 |            2 |
-| Yes          | Yes                   | No                     |               6 |            2 |
+| Yes          | Yes                   | No                     |               7 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,15 +73,15 @@ Table of Contents
 +-------------------------+--------------------------+------------------------------+------------------+----------------+
 |       Clock Signal      |       Enable Signal      |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
 +-------------------------+--------------------------+------------------------------+------------------+----------------+
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/HS0      |                1 |              1 |
 |  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/VS0      |                1 |              1 |
+|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/HS0      |                1 |              1 |
+|  seg1/clk_en            |                          | seg1/SEL[0]                  |                1 |              2 |
 |  seg1/clk_en            |                          | seg1/p_0_in[0]               |                1 |              2 |
-|  seg1/clk_en            |                          | seg1/SEL[0]                  |                2 |              2 |
+|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp |                              |                2 |              4 |
 |  seg1/clk_en            |                          | seg1/SEL[1]                  |                1 |              4 |
-|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp |                              |                3 |              5 |
-|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp | vga_color_logic/vga/vcounter |                2 |              6 |
-|  clk_main/inst/clk_out1 |                          |                              |                4 |             10 |
-|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/eqOp     |                4 |             11 |
+|  clk_main/inst/clk_out1 | vga_color_logic/vga/eqOp | vga_color_logic/vga/vcounter |                2 |              7 |
+|  clk_main/inst/clk_out1 |                          |                              |                5 |             11 |
+|  clk_main/inst/clk_out1 |                          | vga_color_logic/vga/eqOp     |                6 |             11 |
 |  sens/sck_OBUF          | sens/p_0_out0            | reset_IBUF                   |                2 |             12 |
 |  clk_main/inst/clk_out1 |                          | seg1/counter[15]_i_1_n_0     |                4 |             15 |
 |  sens/sck_OBUF          |                          |                              |                5 |             17 |

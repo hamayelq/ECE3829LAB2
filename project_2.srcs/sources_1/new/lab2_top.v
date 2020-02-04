@@ -22,7 +22,7 @@
 
 module lab2_top(
     input clk_fpga,
-    input [1:0] sw,
+    input [2:0] sw,
     output cs,
     input sdo,
     output sck,
