@@ -40,7 +40,7 @@ module light_sensor(
         begin
             if(~cs)
             begin
-                lightData = lightData << 1;
+                lightData <= lightData << 1;
                 lightData[0] <= sdo;
             end
         if(reset)  //remove/reset data if reset

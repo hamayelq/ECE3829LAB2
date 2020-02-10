@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Feb  4 10:55:32 2020
-# Process ID: 37960
+# Start of session at: Thu Feb  6 16:41:30 2020
+# Process ID: 14328
 # Current directory: C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1
 # Command line: vivado.exe -log lab2_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2_top.tcl
 # Log file: C:/Users/Nam Tran/Documents/ECE3829LAB2/project_2.runs/synth_1/lab2_top.vds

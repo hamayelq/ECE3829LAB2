@@ -69,8 +69,8 @@ module lab2_top(
         );
         
      wire [3:0] c, d; // Not connected
-     assign c = {0};
-     assign d = {0};   
+     assign c = {4'b0};
+     assign d = {4'b0};   
      seven_seg seg1(
         .clk(clk_25),
         .A(light[3:0]),
