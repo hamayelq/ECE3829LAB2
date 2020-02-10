@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Hamayel Qureshi, Nam Tran
 // 
 // Create Date: 01/28/2020 08:23:16 AM
 // Design Name: 
@@ -15,7 +15,7 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: The top level module to combine light sensor and VGA display module.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
