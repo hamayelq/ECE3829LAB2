@@ -1,4 +1,23 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: Hamayel Qureshi, Nam Tran
+// 
+// Create Date: 01/28/2020 08:23:16 AM
+// Design Name: 
+// Module Name: lab2_top
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments: Module containing logic to create clock dividers that will pass in data to seven segment module
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module light_sensor(
     input clk_25M, //10Hz for 16 cycles of SCLK
